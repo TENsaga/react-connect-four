@@ -1,0 +1,54 @@
+{
+  "name": "react-connectfour",
+  "version": "1.0.0",
+  "description": "React Redux Connect Four Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --inline --content-base build/ --port 8100",
+    "build.dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
+    "build.prod": "cross-env NODE_ENV=production webpack --config webpack.config.js -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TENsaga/react-connect-four.git"
+  },
+  "author": "TENsaga / Aspen Swanson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TENsaga/react-connect-four/issues"
+  },
+  "homepage": "https://github.com/TENsaga/react-connect-four#readme",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.1.2",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "copy-webpack-plugin": "^4.3.1",
+    "cross-env": "^5.1.3",
+    "css-loader": "^0.28.8",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.7.2",
+    "optimize-css-assets-webpack-plugin": "^3.2.0",
+    "prop-types": "^15.6.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.0"
+  }
+}
