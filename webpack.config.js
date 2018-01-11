@@ -1,6 +1,6 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const OptimizeCSSAssets = require('optimize-css-assets-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -15,7 +15,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.js?/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -35,8 +35,14 @@ const config = {
   },
   devtool: 'source-map',
   plugins: [
-    new ExtractTextPlugin({ filename: 'index_bundle.css' }),
-    new HtmlWebpackPlugin({ template: 'src/index.html' }),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+    }),
+    new ExtractTextPlugin({
+      filename: 'index_bundle.css',
+    }),
     // new CopyWebpackPlugin([ { from: 'src/images/weather-icons', to: 'images' } ]),
   ],
 };
+
+module.exports = config;
